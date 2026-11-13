@@ -3,238 +3,180 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
-    <nav class="navbar">
-      <a class="brand" href="#home">🏏 CricketAI</a>
-      <div class="navlinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#dataset">Dataset</a>
-        <a href="#models">Models</a>
-        <a href="#prediction">Prediction</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+ selector: 'app-root',
+ standalone: true,
+ imports: [CommonModule, FormsModule],
+ template: `
+ <header>
+   <a class="logo" href="#home">🏏 CricketAI</a>
+   <nav>
+     <a href="#home">Home</a>
+     <a href="#about">About</a>
+     <a href="#dataset">Dataset</a>
+     <a href="#models">Models</a>
+     <a href="#prediction">Prediction</a>
+     <a href="#results">Results</a>
+   </nav>
+ </header>
 
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <span class="tag">MACHINE LEARNING PROJECT</span>
-        <h1>Dynamic Cricket<br><span>Match Prediction</span></h1>
-        <p>Explore cricket analytics and machine learning powered match prediction.</p>
-        <a class="primary-btn" href="#prediction">Try Prediction →</a>
-      </div>
-      <div class="hero-icon">🏏</div>
-    </section>
+ <section id="home" class="hero">
+   <div>
+     <span class="tag">ARTIFICIAL INTELLIGENCE • CRICKET ANALYTICS</span>
+     <h1>Dynamic Cricket<br><span>Match Prediction</span></h1>
+     <p>Machine learning powered cricket analytics and match prediction platform.</p>
+     <a class="btn" href="#prediction">Predict Match →</a>
+   </div>
+   <div class="ball">🏏</div>
+ </section>
 
-    <section id="about" class="section">
-      <span class="tag">INTRODUCTION</span>
-      <h2>About The Project</h2>
-      <p class="description">
-        Dynamic Cricket Match Prediction is a machine learning project
-        designed to analyze cricket match information and support
-        data-driven predictions.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">📊</div>
-          <h3>Data Analysis</h3>
-          <p>Explore match statistics, teams and cricket data.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🤖</div>
-          <h3>Machine Learning</h3>
-          <p>Build predictive systems using trained machine learning models.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Dynamic Prediction</h3>
-          <p>Submit match information through an interactive interface.</p>
-        </article>
-      </div>
-    </section>
+ <section id="about" class="section">
+   <span class="tag">INTRODUCTION</span>
+   <h2>About Our Project</h2>
+   <p class="description">
+     A cricket analytics project using machine learning techniques
+     to study match performance and predict cricket outcomes.
+   </p>
+   <div class="grid">
+     <article class="card"><h3>📊 Data Analysis</h3><p>Analyze cricket statistics and match information.</p></article>
+     <article class="card"><h3>🤖 Machine Learning</h3><p>Explore trained predictive models and their performance.</p></article>
+     <article class="card"><h3>⚡ Dynamic Prediction</h3><p>Interactive match input and prediction interface.</p></article>
+   </div>
+ </section>
 
-    <section id="dataset" class="section dark-section">
-      <span class="tag">DATA</span>
-      <h2>Dataset Overview</h2>
-      <p class="description">
-        The project dataset is used for cricket data analysis and
-        machine learning experiments.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <h3>Match Information</h3>
-          <p>Team names, match details and other available match attributes.</p>
-        </article>
-        <article class="card">
-          <h3>Performance Data</h3>
-          <p>Cricket performance information used by the project.</p>
-        </article>
-        <article class="card">
-          <h3>Data Processing</h3>
-          <p>Prepare and transform data for machine learning.</p>
-        </article>
-      </div>
-      <p class="note">Actual dataset statistics will be displayed after the dataset is connected.</p>
-    </section>
+ <section id="dataset" class="section alternate">
+   <span class="tag">DATA MANAGEMENT</span>
+   <h2>Dataset & Features</h2>
+   <p class="description">
+     Cricket data is used for training, evaluation and predictive analysis.
+     Dataset statistics will be displayed when the original dataset is connected.
+   </p>
+   <div class="grid">
+     <article class="card"><h3>Match Data</h3><p>Teams and match information.</p></article>
+     <article class="card"><h3>Performance</h3><p>Runs, wickets and overs.</p></article>
+     <article class="card"><h3>Feature Engineering</h3><p>Preparing data for model input.</p></article>
+   </div>
+ </section>
 
-    <section id="models" class="section">
-      <span class="tag">TECHNOLOGY</span>
-      <h2>Machine Learning Models</h2>
-      <p class="description">
-        The backend can be connected to the trained models available in your project.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">🌳</div>
-          <h3>Random Forest</h3>
-          <p>Ensemble learning approach for predictive analysis.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">📈</div>
-          <h3>Classification</h3>
-          <p>Machine learning classification for prediction tasks.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🧠</div>
-          <h3>Model Evaluation</h3>
-          <p>Evaluate trained models using suitable performance metrics.</p>
-        </article>
-      </div>
-      <p class="note">These are technology descriptions, not confirmation that all three models are trained.</p>
-    </section>
+ <section id="models" class="section">
+   <span class="tag">MACHINE LEARNING</span>
+   <h2>Implemented Model Architecture</h2>
+   <p class="description">
+     The project model list is presented below. Actual trained model files
+     and evaluation results must be connected to verify live execution.
+   </p>
+   <div class="grid">
+     <article class="card model"><span>01</span><h3>Support Vector Classifier</h3><p>SVC machine learning approach.</p></article>
+     <article class="card model"><span>02</span><h3>Random Forest</h3><p>Tree-based ensemble learning.</p></article>
+     <article class="card model"><span>03</span><h3>CatBoost</h3><p>Gradient boosting framework.</p></article>
+     <article class="card model"><span>04</span><h3>LightGBM</h3><p>Efficient gradient boosting.</p></article>
+   </div>
+ </section>
 
-    <section id="prediction" class="section prediction-section">
-      <span class="tag">INTERACTIVE TOOL</span>
-      <h2>Cricket Match Prediction</h2>
-      <p class="description">Enter match details to send a prediction request to the Python backend.</p>
+ <section id="prediction" class="section alternate">
+   <span class="tag">INTERACTIVE PREDICTION</span>
+   <h2>Cricket Match Prediction</h2>
+   <p class="description">Enter the five match parameters below.</p>
 
-      <div class="prediction-box">
-        <label>Team 1</label>
-        <input [(ngModel)]="team1" placeholder="e.g. Pakistan">
+   <div class="formbox">
+     <label>1. Batting Team</label>
+     <input [(ngModel)]="batting" placeholder="Enter batting team">
 
-        <label>Team 2</label>
-        <input [(ngModel)]="team2" placeholder="e.g. India">
+     <label>2. Bowling Team</label>
+     <input [(ngModel)]="bowling" placeholder="Enter bowling team">
 
-        <label>Overs completed</label>
-        <input type="number" [(ngModel)]="overs" min="0" max="50">
+     <label>3. Current Score (Runs)</label>
+     <input type="number" [(ngModel)]="score" min="0" placeholder="e.g. 125">
 
-        <label>Wickets lost</label>
-        <input type="number" [(ngModel)]="wickets" min="0" max="10">
+     <label>4. Overs Completed</label>
+     <input type="number" [(ngModel)]="overs" min="0" max="20" step="0.1" placeholder="e.g. 15">
 
-        <button class="primary-btn full" (click)="predict()" [disabled]="loading">
-          {{ loading ? 'Processing...' : 'Submit Prediction' }}
-        </button>
+     <label>5. Wickets Lost</label>
+     <input type="number" [(ngModel)]="wickets" min="0" max="10" placeholder="e.g. 4">
 
-        <div class="result" *ngIf="message">
-          <h3>Prediction Response</h3>
-          <p>{{ message }}</p>
-        </div>
-      </div>
-    </section>
+     <button class="btn full" (click)="submitPrediction()">Submit Prediction</button>
 
-    <section id="results" class="section">
-      <span class="tag">ANALYTICS</span>
-      <h2>Prediction Results</h2>
-      <p class="description">
-        Prediction results and evaluation metrics will appear here
-        once the trained model is integrated.
-      </p>
-    </section>
+     <div class="notice" *ngIf="message">
+       {{message}}
+     </div>
+   </div>
+ </section>
 
-    <section id="contact" class="section dark-section">
-      <span class="tag">GET IN TOUCH</span>
-      <h2>Contact</h2>
-      <p class="description">
-        Dynamic Cricket Match Prediction Project
-      </p>
-      <a class="primary-btn" href="https://github.com/malikahmednazir/Dynamic-Cricket-Match-Prediction" target="_blank">
-        View GitHub Project
-      </a>
-    </section>
+ <section id="results" class="section">
+   <span class="tag">MATCH ANALYTICS</span>
+   <h2>Prediction Results</h2>
+   <div class="resultbox">
+     <h3>Prediction Dashboard</h3>
+     <p>Actual model output, accuracy and evaluation metrics will appear here after connecting the trained models.</p>
+     <p><strong>Model status:</strong> Awaiting trained model integration.</p>
+   </div>
+ </section>
 
-    <footer>
-      © 2026 Dynamic Cricket Match Prediction | Powered by Angular and Python
-    </footer>
-  `,
-  styles: [`
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    :host { display: block; background: #08131f; color: #f4f7fb; font-family: Arial, sans-serif; }
-    .navbar { position: sticky; top: 0; z-index: 10; background: #101f2d; padding: 20px 6%; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .brand { font-size: 23px; font-weight: bold; color: #45e0a2; text-decoration: none; }
-    .navlinks { display: flex; flex-wrap: wrap; gap: 20px; }
-    .navlinks a { color: #e0e8ef; text-decoration: none; font-size: 14px; }
-    .navlinks a:hover { color: #45e0a2; }
-    .hero { min-height: 490px; padding: 100px 9%; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(120deg,#102e35,#08131f 70%); gap: 30px; }
-    .hero-content { max-width: 650px; }
-    .hero h1 { font-size: clamp(38px,6vw,68px); line-height: 1.12; margin: 22px 0; }
-    .hero h1 span { color: #45e0a2; }
-    .hero p, .description { color: #aab9c7; line-height: 1.8; max-width: 750px; }
-    .hero-icon { font-size: 120px; }
-    .tag { color: #45e0a2; font-weight: bold; letter-spacing: 2px; font-size: 12px; }
-    .primary-btn { display: inline-block; background: #45d99b; color: #08131f; border: 0; padding: 14px 24px; margin-top: 18px; border-radius: 7px; text-decoration: none; font-weight: bold; cursor: pointer; }
-    .primary-btn:disabled { opacity: .6; cursor: wait; }
-    .section { padding: 85px 9%; }
-    .section h2 { font-size: 36px; margin: 16px 0; }
-    .dark-section { background: #101f2d; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 20px; margin-top: 35px; }
-    .card { background: #142738; border: 1px solid #294354; padding: 28px; border-radius: 12px; }
-    .card h3 { color: #45e0a2; }
-    .card p { color: #aab9c7; line-height: 1.7; }
-    .card-icon { font-size: 34px; }
-    .note { color: #9aaebe; font-size: 13px; margin-top: 22px; }
-    .prediction-section { background: #0d202b; }
-    .prediction-box { max-width: 600px; background: #142738; border: 1px solid #294354; padding: 30px; border-radius: 12px; margin-top: 30px; }
-    .prediction-box label { display: block; margin: 17px 0 8px; color: #dce7ef; }
-    .prediction-box input { width: 100%; padding: 14px; background: #08131f; border: 1px solid #355166; border-radius: 6px; color: white; }
-    .full { width: 100%; }
-    .result { background: #203b3d; padding: 15px; border-radius: 8px; margin-top: 20px; overflow-wrap: anywhere; }
-    footer { text-align: center; padding: 25px; color: #9aabba; background: #06101a; }
-    @media(max-width:650px) { .navbar { justify-content: center; } .navlinks { justify-content: center; gap: 12px; } .hero { padding: 70px 7%; } .hero-icon { display: none; } .section { padding: 65px 7%; } }
-  `]
+ <section id="contact" class="section alternate">
+   <span class="tag">PROJECT INFORMATION</span>
+   <h2>Explore Our Project</h2>
+   <p class="description">Dynamic Cricket Match Prediction</p>
+   <a class="btn" href="https://github.com/malikahmednazir/Dynamic-Cricket-Match-Prediction" target="_blank">View GitHub Repository</a>
+ </section>
+
+ <footer>
+   <h3>🏏 CricketAI</h3>
+   Dynamic Cricket Match Prediction | 2026
+ </footer>
+ `,
+ styles: [`
+ *{box-sizing:border-box;scroll-behavior:smooth}
+ :host{display:block;background:#08131f;color:#f3f7fa;font-family:Arial,sans-serif}
+ header{position:sticky;top:0;z-index:20;background:#102333;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+ .logo{font-size:24px;font-weight:bold;color:#44e0a1;text-decoration:none}
+ nav{display:flex;gap:19px;flex-wrap:wrap}
+ nav a{color:#e6edf3;text-decoration:none;font-size:14px}
+ nav a:hover{color:#44e0a1}
+ .hero{min-height:530px;padding:100px 9%;display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(120deg,#123b39,#08131f)}
+ .hero h1{font-size:clamp(38px,6vw,68px);line-height:1.1}
+ .hero h1 span{color:#44e0a1}
+ .hero p,.description{color:#b0c0cc;line-height:1.8;max-width:750px}
+ .ball{font-size:130px}
+ .tag{color:#44e0a1;font-size:12px;font-weight:bold;letter-spacing:2px}
+ .btn{display:inline-block;background:#44e0a1;color:#08131f;padding:15px 25px;border:0;border-radius:7px;text-decoration:none;font-weight:bold;cursor:pointer;margin-top:18px}
+ .section{padding:85px 9%}
+ .section h2{font-size:36px;margin:15px 0}
+ .alternate{background:#102333}
+ .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:35px}
+ .card{padding:28px;background:#142b3d;border:1px solid #2c4657;border-radius:12px}
+ .card h3{color:#44e0a1}
+ .card p{color:#b1c1ce;line-height:1.7}
+ .model span{color:#44e0a1;font-size:26px;font-weight:bold}
+ .formbox,.resultbox{max-width:650px;background:#142b3d;border:1px solid #304a5b;padding:30px;border-radius:12px;margin-top:30px}
+ .formbox label{display:block;margin:18px 0 8px}
+ .formbox input{width:100%;padding:14px;background:#08131f;color:white;border:1px solid #365467;border-radius:6px;font-size:15px}
+ .full{width:100%;margin-top:25px}
+ .notice{margin-top:20px;padding:15px;background:#263e43;border-radius:7px;line-height:1.6}
+ .resultbox p{color:#b1c1ce;line-height:1.7}
+ footer{text-align:center;padding:35px;background:#06101a;color:#9eb0bf}
+ @media(max-width:650px){header{justify-content:center}nav{justify-content:center;gap:12px}.hero{padding:70px 7%}.ball{display:none}.section{padding:65px 7%}}
+ `]
 })
 export class App {
-  team1 = '';
-  team2 = '';
-  overs = 10;
-  wickets = 2;
-  loading = false;
-  message = '';
+ batting = '';
+ bowling = '';
+ score: number | null = null;
+ overs: number | null = null;
+ wickets: number | null = null;
+ message = '';
 
-  async predict() {
-    if (!this.team1.trim() || !this.team2.trim()) {
-      this.message = 'Please enter both team names.';
-      return;
-    }
-
-    if (this.overs < 0 || this.overs > 50 || this.wickets < 0 || this.wickets > 10) {
-      this.message = 'Please enter valid overs and wickets.';
-      return;
-    }
-
-    this.loading = true;
-    this.message = '';
-
-    try {
-      const response = await fetch('https://YOUR-RENDER-SERVICE.onrender.com/api/predict', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          team1: this.team1,
-          team2: this.team2,
-          overs: this.overs,
-          wickets: this.wickets
-        })
-      });
-
-      const data = await response.json();
-      this.message = data.message || data.error || JSON.stringify(data);
-    } catch {
-      this.message = 'Backend is not connected yet. Deploy the Python backend and update its URL.';
-    } finally {
-      this.loading = false;
-    }
-  }
+ submitPrediction() {
+   if (!this.batting.trim() || !this.bowling.trim()) {
+     this.message = 'Please enter both team names.';
+     return;
+   }
+   if (this.score === null || this.overs === null || this.wickets === null ||
+       !Number.isFinite(this.score) || !Number.isFinite(this.overs) ||
+       !Number.isInteger(this.wickets) || this.score < 0 ||
+       this.overs < 0 || this.overs > 20 ||
+       this.wickets < 0 || this.wickets > 10) {
+     this.message = 'Please enter valid values for all five parameters.';
+     return;
+   }
+   this.message = 'Your five parameters have been captured. Connect the original trained Python model API to generate a real prediction. GitHub Pages cannot execute Python models.';
+ }
 }
